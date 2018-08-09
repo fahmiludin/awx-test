@@ -19,14 +19,14 @@
           when: "'reboot_required_file' in hostvars[item] and hostvars[item]['reboot_required_file'].stat.exists"
 
 # ref https://support.ansible.com/hc/en-us/articles/201958037-Reboot-a-server-and-wait-for-it-to-come-back
-       - name: Rebooting machine
-         shell: sleep 2 && shutdown -r now "Ansible updates triggered"
-         async: 1
-         poll: 0
-         ignore_errors: true
-         when: reboot_required_file.stat.exists
+        - name: Rebooting machine
+          shell: sleep 2 && shutdown -r now "Ansible updates triggered"
+          async: 1
+          poll: 0
+          ignore_errors: true
+          when: reboot_required_file.stat.exists
 
-       - name: Waiting for the machine to come back
-         local_action: wait_for host={{ ansible_host }} state=started port=22 delay=30
-         become: no
-         when: reboot_required_file.stat.exists
+        - name: Waiting for the machine to come back
+          local_action: wait_for host={{ ansible_host }} state=started port=22 delay=30
+          become: no
+          when: reboot_required_file.stat.exists
