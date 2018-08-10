@@ -40,7 +40,8 @@
             type: thin
             datastore: "{{ datastore }}"
         networks:
-          - device_type: vmxnet3
+          - name: VM Network
+            device_type: vmxnet3
             type: dhcp
         hardware:
           memory_mb: "{{ vm_memory | default(1024) }}"
