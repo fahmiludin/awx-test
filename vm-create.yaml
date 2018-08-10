@@ -1,4 +1,4 @@
- ---
+---
   # vim: set ft=ansible et ts=2 sw=2:
   #
   # Create a new VM from a template using the new vmware_guest module
