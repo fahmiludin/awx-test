@@ -31,6 +31,7 @@
         username: "{{ vcenter_user }}"
         password: "{{ vcenter_pass }}"
         esxi_hostname: "{{ esxhost }}"
+        folder: Dev Servers
         name: "{{ name }}"
         template: "{{ vmtemplate }}"
         disk:
