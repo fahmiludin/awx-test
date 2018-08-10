@@ -20,9 +20,9 @@
     #  fail: msg="Must pass name and group to -e"
     #  when: name is not defined or group is not defined
 
-    - name: Check for vSphere access parameters
-      fail: msg="Must set vcenter_user and vcenter_pass in a Vault"
-      when: (vcenter_user is not defined) or (vcenter_pass is not defined)
+    #- name: Check for vSphere access parameters
+    #  fail: msg="Must set vcenter_user and vcenter_pass in a Vault"
+    #  when: (vcenter_user is not defined) or (vcenter_pass is not defined)
 
     - name: Create VM from template
       vmware_guest:
