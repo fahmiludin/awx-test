@@ -55,6 +55,6 @@
         
     - name: add server to group
       add_host:
-      name: "{{ newvm.instance.ipv4 }}"
+      name: "{{ newvm.instance.ipv4 }} {{ name }}"
       groups: testvm
       
