@@ -1,5 +1,9 @@
 ---
-name: add host to group
-  add_host:
-    name: "{{ ip_addr }}"
-    groups: testvm
+- hosts: all
+  gather_facts: false
+  connection: local
+  
+    - name: add host to group
+      add_host:
+        name: "{{ ip_addr }}"
+        groups: testvm
