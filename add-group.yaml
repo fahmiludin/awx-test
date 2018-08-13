@@ -1,3 +1,4 @@
+---
 name: add host to group
   add_host:
     name: "{{ ip_addr }}"
