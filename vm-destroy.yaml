@@ -35,3 +35,4 @@
         folder: Dev Servers
         name: "{{ name }}"
         state: absent
+        force: True
