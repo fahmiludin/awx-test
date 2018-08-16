@@ -34,4 +34,4 @@
         datacenter: 'JewelSG'
         folder: Dev Servers
         name: "{{ name }}"
-        state: present
+        state: absent
