@@ -1,0 +1,12 @@
+---
+- name: reboot scrapper prod
+  hosts: all
+  gather_facts: false
+  connection: local
+  tasks:
+    - name: Reboot a server
+      linode:
+        api_key: 'USvDhP1nJjrQpxhgmeqa2LvdO9kiwLftDbMwINrf36ucHbY7H7DUjO9o7pp4wuwk'
+        name: scraper
+        linode_id: 2650890 
+        state: restarted    
