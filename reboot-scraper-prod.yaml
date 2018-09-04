@@ -4,6 +4,10 @@
   gather_facts: false
   connection: local
   tasks:
+    - name: install linode-python
+      pip:
+        name: linode-python
+
     - name: Reboot a server
       linode:
         api_key: 'USvDhP1nJjrQpxhgmeqa2LvdO9kiwLftDbMwINrf36ucHbY7H7DUjO9o7pp4wuwk'
