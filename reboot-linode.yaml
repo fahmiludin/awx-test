@@ -1,0 +1,16 @@
+---
+- name: reboot scrapper dev
+  hosts: all
+  gather_facts: false
+  connection: local
+  tasks:
+    - name: Install linode-python
+      pip:
+        name : linode-python
+
+    - name: Reboot a linode
+      linode:
+        api_key: '{{ api_key }}'
+        name: {{ linode_name }}
+        linode_id: {{ linode_id }} 
+        state: restarted    
