@@ -10,7 +10,7 @@
 
     - name: Reboot a linode
       linode:
-        api_key: '{{ api_key }}'
-        name: {{ linode_name }}
-        linode_id: {{ linode_id }} 
+        api_key: "{{ api_key }}"
+        name: "{{ linode_name }}"
+        linode_id: "{{ linode_id }}" 
         state: restarted    
