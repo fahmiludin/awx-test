@@ -20,3 +20,10 @@
         upgrade=dist
       when: >
         ansible_distribution == 'Ubuntu'
+
+    - name: clean unwanted old stuff
+      apt: >
+        autoremove=yes
+        purge=yes
+      when: >
+        ansible_distribution == 'Ubuntu'
