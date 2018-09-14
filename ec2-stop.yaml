@@ -1,0 +1,14 @@
+---
+  - name: Stop an EC2 Instance
+    hosts: all
+    connection: local
+    gather_facts: False
+
+    # Task that will be used to Launch/Create an EC2 Instance
+    tasks:
+      - name: Stop instance
+        local_action:
+          module: ec2
+          instance_tags:
+            env: "{{ env }}"
+          state: stopped
