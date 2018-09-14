@@ -10,6 +10,5 @@
         local_action:
           module: ec2
           region: '{{ region }}'
-          instance_tags:
-            env: "{{ env }}"
+          instance_ids: '{{ instance_ids }}'
           state: absent
