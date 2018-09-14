@@ -1,0 +1,15 @@
+---
+  - name: Restart an EC2 Instance
+    hosts: all
+    connection: local
+    gather_facts: False
+
+    # Task that will be used to Launch/Create an EC2 Instance
+    tasks:
+      - name: restart instance
+        local_action:
+          module: ec2
+          region: '{{ region }}'
+          instance_tags:
+            env: "{{ env }}"
+          state: restarted
