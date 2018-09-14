@@ -7,17 +7,15 @@
 
     # Task that will be used to Launch/Create an EC2 Instance
     tasks:
-
       - name: Launch the new EC2 Instance
-        ec2: 
-          group:"{{ security_group }}" 
-          instance_type:"{{ instance_type}}" 
-          image:"{{ image }}" 
-          wait:true 
-          region:"{{ region }}" 
-          keypair:"{{ keypair }}"
-          count:"{{count}}"
-          vpc_subnet_id:"{{ subnet_id }}"
+        ec2:
+          group: "{{ security_group }}"
+          instance_type: "{{ instance_type }}"
+          image: "{{ image }}"
+          wait: true 
+          region: "{{ region }}"
+          keypair: "{{ keypair }}"
+          count: "{{count}}"
         register: ec2
 
       - name: Wait for SSH to come up
