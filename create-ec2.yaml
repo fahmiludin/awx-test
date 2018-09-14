@@ -32,5 +32,5 @@
         with_items: ec2.instances
         args:
           tags:
-            Name: {{ name }}
-            env: {{ env }}
+            Name: "{{ name }}"
+            env: "{{ env }}"
