@@ -11,5 +11,5 @@
           module: ec2
           region: '{{ region }}'
           instance_tags:
-            env: "{{ env }}"
+            awx: "{{ env }}"
           state: running
