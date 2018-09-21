@@ -17,4 +17,13 @@
       service:
         name: ntp
         state: restarted
+      when: >
+        ansible_distribution == 'Ubuntu'
+
+    name: restart ntp service
+      service:
+        name: ntpd
+        state: restarted
+      when: >
+        ansible_distribution == 'Centos'
 
