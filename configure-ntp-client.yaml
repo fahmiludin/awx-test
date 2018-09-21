@@ -5,7 +5,7 @@
     - name: comment ipa server line
       lineinfile:
         path : /etc/ntp.conf
-        regexp : '^jewelpaymentech.net'
+        regexp : 'jewelpaymentech.net'
         line : '#server identity.jewelpaymentech.net'
 
     - name: put aws ntp server details
