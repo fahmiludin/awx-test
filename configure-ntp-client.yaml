@@ -20,7 +20,7 @@
       when: >
         ansible_distribution == 'Ubuntu'
 
-    name: restart ntp service
+    - name: restart ntp service
       service:
         name: ntpd
         state: restarted
