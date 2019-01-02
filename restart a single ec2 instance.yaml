@@ -8,6 +8,7 @@
     tasks:
       - name: restart instance
         local_action:
-          module: ec2
-          instance_ids: '{{ instance_ids }}'
+          module: ec2_instance
           state: restarted
+          instance_ids:
+            - "{{ instance_ids }}"
