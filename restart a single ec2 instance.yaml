@@ -13,4 +13,5 @@
           region: '{{ region }}'
           instance_tags:
             env: "{{ env }}"
+            product : "{{ product }}"
           state: restarted
