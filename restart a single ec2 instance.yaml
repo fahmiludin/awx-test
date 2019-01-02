@@ -12,3 +12,4 @@
           state: restarted
           instance_ids:
             - "{{ instance_ids }}"
+          region : "{{ region }}"
