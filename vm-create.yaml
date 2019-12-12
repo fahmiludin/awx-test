@@ -8,11 +8,11 @@
   gather_facts: false
   connection: local
   vars:
-    vcenter_hostname: 10.8.1.22
-    esxhost: 10.8.1.23
-    datastore: ESXi2_SSD-01
+    vcenter_hostname: "{{ vcenter_hostname }}"
+    esxhost: "{{ esxhost }}"
+    datastore: "{{ datastore }}"
     network: "VM Network"
-    vmtemplate: Ubuntu 16.04 base image
+    vmtemplate: "{{ vmtemplate }}"
     notes: Created by Ansible
     dumpfacts: False
   tasks:
@@ -31,8 +31,8 @@
         username: "{{ vcenter_user }}"
         password: "{{ vcenter_pass }}"
         esxi_hostname: "{{ esxhost }}"
-        datacenter: 'JewelSG'
-        folder: Dev Servers
+        datacenter: "{{ datacenter }}"
+        folder: "{{ folders }}"
         name: "{{ name }}"
         template: "{{ vmtemplate }}"
         disk:
