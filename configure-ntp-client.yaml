@@ -6,8 +6,8 @@
       lineinfile:
         path : /etc/ntp.conf
         state : absent
-        regexp : 'jewelpaymentech.net'
-        line : '#server identity.jewelpaymentech.net'
+        regexp : 'ipa.com'
+        line : '#server ipa.com'
 
     - name: put aws ntp server details
       lineinfile:
